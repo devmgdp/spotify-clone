@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+  
+    <!-- Icon Page -->
+    <link rel="shortcut icon" href="./src/assets/icons/favicon.png" type="image/x-icon" />
+  
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/var.css">
+    <link rel="stylesheet" href="./src/styles/main-content.css">
+    <link rel="stylesheet" href="./src/styles/sidebar-footer.css" />
+    <link rel="stylesheet" href="./src/styles/media-querys.css">
+  
+    <!-- Links Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
+  
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" />
+
+    <style>
+    .cards {
+        display: none;
+        opacity: 0;
+      }
+    </style>
+  </head>
+<body>
+  <div class="sidebar">
+    <nav class="sidebar-navigation">
+      <div class="logo">
+        <a href="">
+          <img src="./src/assets/icons/logo-spotify.png" alt="Logo do Spotify" />
+        </a>
+      </div>
+
+      <ul>
+        <li>
+          <a href="./index.html">
+            <span class="fa fa-home"></span>
+            <span>Início</span>
+          </a>
+        </li>
+        <li>
+          <a href="./buscar.html">
+            <span class="fa fa-search"></span>
+            <span>Buscar</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="library">
+      <div class="library-content">
+        <button class="library-button">
+          <span class="fa fa-book"></span>
+          <span>Sua Biblioteca</span>
+        </button>
+        <span class="fa fa-plus" id="plus-icon"></span>
+      </div>
+
+      <section class="section-playlist">
+        <div class="section-playlist-content">
+          <span class="text title">Crie sua primeira playlist</span>
+          <span class="text subtitle">É fácil, vamos te ajudar.</span>
+          <button class="section-playlist-button">
+            <span>Criar Playlist</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="cookies">
+        <a href="">Cookies</a>
+      </div>
+
+      <div class="languages">
+        <button class="languages-button">
+          <span class="fa fa-globe">
+            <span class="language">Português do
+              Brasil</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="main-container">
+      <nav class="header-navigation">
+        <div class="header-search">
+          <img src="./src/assets/icons/search.png" alt="">
+          <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?">
+        </div>
+
+        <div class="header-login">
+          <button class="subscribe">Inscreva-se</button>
+          <button class="login">Entrar</button>
+        </div>
+      </nav>
+      <div class="result-playlist-container">
+        <div id="result-playlists">
+          <div class="playlist">
+            <!-- BOM DIA, BOA TARDE OU BOA NOITE FEITO COM JS, DE ACORDO COM O HORÁRIO DO SISTEMA-->
+            <h1 id="greeting"></h1>
+            <p class="container-subtitle">Navegar por todas as seções</p>
+          </div>
+        </div>
+
+        <div id="result-artist" class="hidden">
+          <div class="grid-container">
+            <div class="artist-card" id="">
+              <div class="card-img">
+                <img id="artist-img" class="artist-img" />
+                <div class="play">
+                  <span class="fa fa-solid fa-play"></span>
+                </div>
+              </div>
+              <div class="card-text">
+                <a title="Foo Fighters" class="vst" href=""></a>
+                <span class="artist-name" id="artist-name"></span>
+                <span class="artist-categorie">Artista</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="text">
+      <p class="footer-title">Testar o Premium de graça</p>
+      <p class="footer-subtitle">
+        Inscreva-se para curtir música ilimitada e podcasts só com alguns
+        anúncios. Não precisa de cartão de crédito.
+      </p>
+    </div>
+    <div class="button">
+      <button type="button">Inscreva-se grátis</button>
+    </div>
+  </footer>
+  
+  <script src="./src/scripts/saudacao.js"></script>
+  <script src="./src/scripts/index.js"></script>
+</body>
+</html>
